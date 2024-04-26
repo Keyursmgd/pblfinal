@@ -1,0 +1,49 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PMC page4</title>
+<link rel="stylesheet" href="{% static 'page4.css' %}">
+</head>
+<body>
+<div class="calendar-container">
+  <h1>Fill Meeting Details</h1>
+  <div class="schedule-meeting">
+    <h2>Schedule Meeting</h2>
+    <form id="meeting-form" action="{% url 'addmeet' %}" method="POST">
+      {% csrf_token %}
+      <div class="input-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" required>
+      </div>
+      <div class="input-group">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="3"></textarea>
+      </div>
+      <div class="input-group">
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" required>
+      </div>
+      <div class="input-group">
+        <label for="date-time">Date & Time</label>
+        <input type="datetime-local" id="date-time" name="date-time" required>
+      </div>
+        <div class="input-group">
+          <label for="duration">Duration</label>
+          <select id="duration" name="duration" required>
+              <option value="30">30 Minutes</option>
+              <option value="60">60 Minutes</option>
+              <option value="90">90 Minutes</option>
+              <option value="120">120 Minutes</option>
+          </select>
+      </div>
+      
+      </div>
+      <button type="submit">Add</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>

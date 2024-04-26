@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PMC page3</title>
+<link rel="stylesheet" href="{% static 'page3.css' %}">
+</head>
+<body>
+  <div class="headlogo">
+    <div class="logo">
+      <img src="{% static 'pict logo png.png' %}" width="200px"/>
+    </div>
+
+    <div class="text">
+      <h1 class="pmc">PICT MEETING CALENDAR</h1>
+
+      <div class="desc">
+        (An Autonomous Institute affiliated to Savitribai Phule Pune
+        University)
+        <br />
+        <b>
+          AICTE APPROVED | ISO 9001:2015 | NAAC A+ Grade | NBA [All Eligible
+          UG Programs]
+        </b>
+      </div>
+    </div>
+    <button id="loginbtn">Admin</button>
+  </div>
+<div class="calendar-container">
+  
+  <div class="header">
+    
+    <div class="actions">
+      <a href="{% url 'pict_meeting_calendar:page4' %}" target="_blank"><button id="create-meeting-btn">Create Meeting</button></a>
+      <!-- <button id="modify-meeting-btn">Modify Meeting</button> -->
+      <button id="cancel-meeting-btn">Cancel Meeting</button>
+      
+    </div>
+  </div>
+</div>
+<!-- <div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+   
+    <form id="meeting-form">
+     
+      <div class="input-group">
+        <label for="meeting-date">Meeting Date</label>
+        <input type="date" id="meeting-date" name="meeting-date" required>
+      </div>
+      <div class="input-group">
+        <label for="meeting-time">Meeting Time</label>
+        <input type="time" id="meeting-time" name="meeting-time" required>
+      </div>
+      
+      <div id="create-meeting-fields">
+        <div class="input-group">
+          <label for="meeting-title">Meeting Title</label>
+          <input type="text" id="meeting-title" name="meeting-title" required>
+        </div>
+        
+      </div>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div> -->
+
+<!-- ------------------------------------------------------------- -->
+
+<div class="contento">
+  <div class="head">
+    <button id="prev-month">&lt;</button>
+    <h1 id="current-month">January 2024</h1>
+    <button id="next-month">&gt;</button>
+    
+  </div>
+  <div id="calendar"></div>
+  
+</div>
+<script src="{% static 'page2.js' %}"></script>
+<script src="{% static 'page1.js' %}"></script>
+</body>
+</html>

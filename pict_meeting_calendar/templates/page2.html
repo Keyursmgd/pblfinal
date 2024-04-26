@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PMC page2</title>
+    <link rel="stylesheet" href="{% static 'page2.css' %}" />
+  </head>
+  <body>
+    <div class="contento">
+      <div class="headlogo">
+        <div class="logo">
+          <img src="{% static 'pict logo png.png' %}" width="200px" />
+        </div>
+
+        <div class="text">
+          <h1 class="pmc">PICT MEETING CALENDAR</h1>
+
+          <!-- <div class="desc">
+            (An Autonomous Institute affiliated to Savitribai Phule Pune
+            University)
+            <br />
+            <b>
+              AICTE APPROVED | ISO 9001:2015 | NAAC A+ Grade | NBA [All Eligible
+              UG Programs]
+            </b>
+          </div> -->
+        </div>
+      </div>
+      <div class="logincontainer">
+        <h1 class="ealc">Enter Admin Login credentials</h1>
+        <form id="loginform">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit">Login</button>
+          <a href="{% url 'pict_meeting_calendar:page3' %}" id="loginlink">Login</a>
+        </form>
+      </div>
+    </div>
+    <script src="{% static 'page2.js' %}"></script>
+  </body>
+</html>

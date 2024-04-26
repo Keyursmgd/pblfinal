@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calendar</title>
+    </head>
+    <body>
+        <h1>Meeting added</h1>
+        {% for i in meetings %}
+        <li>{{ i.title }} - {{ i.description }} - {{ i.location }} - {{ i.datetime }} - {{ i.meeting_duration }}</li>
+        {% endfor %}
+    </body>
+</html>

@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PMC page1</title>
+    <link rel="stylesheet" href="{% static 'page1.css' %}" />
+  </head>
+  <body>
+  
+    <div class="calendar-container">
+      <div class="headlogo">
+        <div class="logo">
+          <img src="{% static 'pict logo png.png' %}" width="200px" />
+        </div>
+
+        <div class="text">
+          <h1 class="pmc">PICT MEETING CALENDAR</h1>
+
+          <div class="desc">
+            (An Autonomous Institute affiliated to Savitribai Phule Pune
+            University)
+            <br />
+            <b>
+              AICTE APPROVED | ISO 9001:2015 | NAAC A+ Grade | NBA [All Eligible
+              UG Programs]
+            </b>
+          </div>
+        </div>
+      </div>
+
+      <div class="contento">
+        <div class="header">
+          
+          <button id="prev-month">&lt;</button>
+          <h1 id="current-month">January 2024</h1>
+          <button id="next-month">&gt;</button>
+          <a href="{% url 'pict_meeting_calendar:page2' %}"><button id="loginbtn" >Login</button></a>
+          
+
+        </div>
+
+        
+
+        
+        <div id="calendar"></div>
+      </div>
+
+
+      <!-- //trying -->
+     
+      
+      
+  
+        
+    </div>
+    <script src="{% static 'page1.js' %}"></script>
+  </body>
+
+</html>
